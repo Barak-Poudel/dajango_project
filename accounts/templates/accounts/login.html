@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="auth-wrapper">
+    <div class="auth-card fade-up">
+
+        <div class="logo-container">
+            
+            <h1>RentSmart</h1>
+        </div>
+
+        <h2>Welcome Back</h2>
+
+        <p class="subtitle">
+            Find your perfect student room
+        </p>
+
+        <form method="POST" id="loginForm">
+            {% csrf_token %}
+
+            <div class="mb-3">
+                <label>Username</label>
+                {{ form.username }}
+            </div>
+
+            <div class="mb-4">
+                <label>Password</label>
+                {{ form.password }}
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100 auth-btn">
+                Login
+            </button>
+        </form>
+
+        <div class="auth-footer">
+            Don't have an account?
+            <a href="{% url 'register' %}">
+                Register
+            </a>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}

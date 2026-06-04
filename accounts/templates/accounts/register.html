@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="auth-wrapper">
+    <div class="auth-card fade-up">
+
+        <div class="logo-container">
+           
+            <h1>RentSmart</h1>
+        </div>
+
+        <h2>Create Account</h2>
+
+        <p class="subtitle">
+            Join RentSmart today
+        </p>
+
+        <form method="POST">
+            {% csrf_token %}
+
+            <div class="mb-3">
+                <label>Username</label>
+                {{ form.username }}
+            </div>
+
+            <div class="mb-3">
+                <label>Email</label>
+                {{ form.email }}
+            </div>
+
+            <div class="mb-4">
+                <label>Password</label>
+                {{ form.password }}
+            </div>
+
+            <button type="submit" class="btn btn-success w-100 auth-btn">
+                Create Account
+            </button>
+        </form>
+
+        <div class="auth-footer">
+            Already have an account?
+            <a href="{% url 'login' %}">
+                Login
+            </a>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}
