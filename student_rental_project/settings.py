@@ -26,10 +26,8 @@ SECRET_KEY = 'django-insecure-nqbf=8z-0n%8xb3cvi7c01@kn2^7@-p+%6r=oxpxhz#8u%w7sp
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    
-    'RentSmart.pythonanywhere.com',
+    'rentsmart-ebyj.onrender.com',
 ]
-
 # Application definition
 
 INSTALLED_APPS = [
